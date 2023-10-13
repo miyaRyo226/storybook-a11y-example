@@ -14,7 +14,8 @@
   "dependencies": {
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "run": "^1.4.0"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^7.4.6",
