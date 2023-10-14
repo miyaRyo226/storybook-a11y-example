@@ -4,9 +4,27 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-"remoteUser": "node",
-"features": {
-	"ghcr.io/devcontainers/features/git:1": {},
-	"ghcr.io/devcontainers/features/github-cli:1": {}
-}
+	"remoteUser": "node",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-playwright.playwright"
+			]
+		}
+	},
+	"mounts": [
+		{
+			"type": "bind",
+			"source": "/tmp/.X11-unix",
+			"target": "/tmp/.X11-unix"
+		}
+	],
+	"containerEnv": {
+		// For X Window System.
+		"DISPLAY": "host.docker.internal:0.0"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	}
 }

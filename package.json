@@ -10,7 +10,8 @@
     "test": "jest --passWithNoTests --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test:storybook": "test-storybook"
+    "test:storybook": "test-storybook",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "concurrently": "^8.2.1",
@@ -22,6 +23,7 @@
     "wait-on": "^7.0.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.39.0",
     "@storybook/addon-a11y": "^7.4.6",
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/addon-interactions": "^7.4.6",
